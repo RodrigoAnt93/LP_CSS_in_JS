@@ -1,11 +1,11 @@
 /* eslint-disable no-undef */
-import { render } from "@testing-library/react"
-import Home from "./index"
-describe("Jest", () => {
-	it("should work", () => {
-		expect(1).toBe(1)
-	})
-	it("should display elements", () => {
-		render(<Home />)
+import { screen } from "@testing-library/react"
+import { renderTheme } from "../../styles/render-theme"
+import App from "./index"
+import { theme } from "../../styles/theme"
+
+describe("<App />", () => {
+	it("should render App", () => {
+		renderTheme(<App />)
 	})
 })
